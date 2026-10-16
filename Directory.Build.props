@@ -1,0 +1,11 @@
+<Project>
+  <!-- Configuración común a todos los proyectos de la solución -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <!-- Sin ICU: compatible con imágenes chiseled/alpine más adelante -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+</Project>

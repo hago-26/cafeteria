@@ -1,0 +1,33 @@
+@base = http://localhost:5002
+
+GET {{base}}/info
+
+###
+GET {{base}}/health/ready
+
+###
+# 201: crea el pedido (2 espresso + 1 croissant = 115.00)
+POST {{base}}/pedidos
+Content-Type: application/json
+
+{
+  "items": [
+    { "productoId": 1, "cantidad": 2 },
+    { "productoId": 5, "cantidad": 1 }
+  ]
+}
+
+###
+# 400: producto 6 no disponible y 999 no existe
+POST {{base}}/pedidos
+Content-Type: application/json
+
+{
+  "items": [
+    { "productoId": 6, "cantidad": 1 },
+    { "productoId": 999, "cantidad": 1 }
+  ]
+}
+
+###
+GET {{base}}/pedidos

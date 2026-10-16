@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cafetería</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>☕ Cafetería</h1>
+    <p class="sub">La UI solo habla con el gateway (<code>/api/...</code>). Cada respuesta muestra qué contenedor la atendió.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Menú</h2>
+      <table id="menu">
+        <thead><tr><th>Producto</th><th>Precio</th><th>Cantidad</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <button id="btn-pedir">Crear pedido</button>
+      <p id="resultado" class="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>Últimos pedidos</h2>
+      <button id="btn-pedidos" class="sec">Actualizar</button>
+      <ul id="pedidos"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Balanceo</h2>
+      <p>Llama 10 veces a <code>/info</code> y cuenta qué host respondió.</p>
+      <div class="fila">
+        <button data-servicio="catalogo" class="sec btn-balanceo">catalogo-api</button>
+        <button data-servicio="pedidos" class="sec btn-balanceo">pedidos-api</button>
+      </div>
+      <ul id="hosts"></ul>
+    </section>
+  </main>
+
+  <footer>Última respuesta servida por: <strong id="servido-por">—</strong></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

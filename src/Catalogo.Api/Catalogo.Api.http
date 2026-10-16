@@ -1,0 +1,19 @@
+@base = http://localhost:5001
+
+GET {{base}}/info
+
+###
+GET {{base}}/health/live
+
+###
+GET {{base}}/health/ready
+
+###
+GET {{base}}/productos
+
+###
+GET {{base}}/productos/3
+
+###
+# Debe responder 404
+GET {{base}}/productos/999

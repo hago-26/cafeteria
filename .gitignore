@@ -1,0 +1,31 @@
+# --- .NET ---
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+TestResults/
+*.user
+*.suo
+*.rsuser
+*.trx
+coverage*.xml
+coverage*.json
+
+# --- IDEs ---
+.vs/
+.idea/
+*.swp
+.vscode/*
+!.vscode/extensions.json
+
+# --- Secretos ---
+.env
+.env.*
+!.env.example
+*.pfx
+*.key
+secrets/
+
+# --- SO ---
+.DS_Store
+Thumbs.db
